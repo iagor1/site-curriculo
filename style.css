@@ -1,0 +1,68 @@
+body{
+    margin:0;
+}
+.container{
+    display: grid;
+    height: 100%;
+    width: 100vw;
+    color: #26252d;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.2fr 0.8fr 2fr 1fr;
+    grid-template-areas: 
+    "sidebar autor autor autor " 
+    "sidebar objetivo objetivo idioma"
+    "sidebar conteudo conteudo contato"
+    "sidebar conteudo conteudo contato"
+    "sidebar conteudo conteudo contato";
+    text-align: left;
+    font-family: 'Akaya Kanadaka', cursive;
+}
+.container p {
+    font-size: larger;
+}
+.contato{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    grid-area: contato;
+}
+.contato a{
+    color: #780a00;
+}
+.sidebar {
+    background-color: #024751;
+    padding: 50% 20%;
+    grid-area: sidebar;
+    color: #ffffff;
+    text-align: center;
+}
+.autor{
+    text-align: center;
+    grid-area: autor;
+}
+.conteudo{
+    padding-left: 1vw;
+    padding-right: 1vw;
+    grid-area: conteudo;
+}
+.idioma{
+    grid-area: idioma;
+    padding-left: 1vw;
+    padding-right: 1vw;
+}
+.objetivo{
+    grid-area: objetivo;
+    padding-left: 1vw;
+    padding-right: 1vw;
+} 
+@media only screen and(max-width: 550px){
+    .container{
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.3fr 2.5fr 1.5fr 1.5fr 1fr;
+        grid-template-areas:
+        "sidebar"
+        "conteudo"
+        "conteudo"
+        "conteudo"
+        "conteudo";
+    }
+}
